@@ -172,3 +172,5 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+/FER 2013/test/
+/FER 2013/train/
