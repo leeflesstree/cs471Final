@@ -1,0 +1,74 @@
+{
+  "feature_schema_version": 2,
+  "rows": 981,
+  "feature_columns": [
+    "left_eye_width",
+    "left_eye_height",
+    "right_eye_width",
+    "right_eye_height",
+    "left_eye_aspect_ratio",
+    "right_eye_aspect_ratio",
+    "left_eyebrow_eye_distance",
+    "right_eyebrow_eye_distance",
+    "inter_eyebrow_distance",
+    "mouth_width",
+    "mouth_height",
+    "mouth_inner_width",
+    "left_lip_height",
+    "right_lip_height",
+    "mouth_aspect_ratio",
+    "nose_length",
+    "nose_to_lip_distance",
+    "jaw_width",
+    "chin_to_nose_distance",
+    "eye_line_angle",
+    "mouth_line_angle",
+    "eye_symmetry",
+    "mouth_symmetry",
+    "upper_eye_symmetry",
+    "eyebrow_symmetry"
+  ],
+  "class_counts": {
+    "anger": 135,
+    "contempt": 54,
+    "disgust": 177,
+    "fear": 75,
+    "happy": 207,
+    "sadness": 84,
+    "surprise": 249
+  },
+  "input_files": [
+    {
+      "path": "data/features_original.csv",
+      "sha256": "78107fd63bbc02e65b5538c58adfd6cea0fd15a0ee41a2821ae3cfeab8212459"
+    },
+    {
+      "path": "archive/coursework/Preprocessing/CleanData2/LandmarkData/landmarks_train.csv",
+      "sha256": "55e04890240d89ef256c9e04911c4ab8624320275d9134eb48ed4d85df10dc9a"
+    },
+    {
+      "path": "archive/coursework/Preprocessing/CleanData2/LandmarkData/landmarks_test.csv",
+      "sha256": "6817c0769a5c8f6fe21b25a3282c4f88b1eb1898a48ab6932cbbe3ba758388a1"
+    }
+  ],
+  "output_file": {
+    "path": "data/features.csv",
+    "sha256": "a3ae3a5081cdef3096db9f4149c695ed42e2fbf1797c7395756ee8d3ce3a2ee5"
+  },
+  "legacy_reconstruction": {
+    "verified": true,
+    "rtol": 1e-09,
+    "atol": 1e-09,
+    "maximum_absolute_error": 1.7763568394002505e-15,
+    "labels_match": true,
+    "image_names_match": true
+  },
+  "corrections": [
+    "Keep eye and mouth aspect ratios dimensionless instead of dividing by eye span again.",
+    "Normalize all four horizontal symmetry offsets by outer-eye span.",
+    "Use outer corners 33 and 263 for eye_line_angle.",
+    "Rename the last symmetry slots to upper_eye_symmetry and eyebrow_symmetry.",
+    "Reject degenerate denominators instead of adding scale-dependent epsilon constants."
+  ],
+  "grouping_limit": "Renamed images do not retain verified subject or sequence identifiers."
+}
