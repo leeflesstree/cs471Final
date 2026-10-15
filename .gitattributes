@@ -1,0 +1,13 @@
+* text=auto eol=lf
+
+# Preserve supplied coursework and source-data bytes for provenance checks.
+archive/coursework/** -text linguist-vendored
+data/features_original.csv -text
+data/features.csv -text
+
+*.png -text
+*.docx -text
+*.pptx -text
+
+results/** linguist-generated
+data/features.csv linguist-generated

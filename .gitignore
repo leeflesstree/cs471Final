@@ -174,3 +174,10 @@ cython_debug/
 .pypirc
 /FER 2013/test/
 /FER 2013/train/
+
+# Local benchmark environment and scratch outputs
+.venv/
+results/quick/
+results/ci-smoke/
+*.egg-info/
+.jupyter-runtime/
